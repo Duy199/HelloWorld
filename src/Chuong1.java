@@ -5,9 +5,12 @@ public class Chuong1 {
         //XacDinhNamNhuan bai1_6 = new XacDinhNamNhuan();
         //bai1_6.xacDinhNamNhuan();
         //bai 1.7
-        XacDinhNgay bai1_7 = new XacDinhNgay();
-        bai1_7.ngayTrongThang();
-        //
+        //XacDinhNgay bai1_7 = new XacDinhNgay();
+        //bai1_7.ngayTrongThang();
+        //bai 1.8
+        BaiTapTinhDiem Ruby = new BaiTapTinhDiem();
+        Ruby.TinhDiem();
+
 
     }
 }

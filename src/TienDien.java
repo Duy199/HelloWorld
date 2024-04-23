@@ -1,7 +1,22 @@
 import java.util.Scanner;
 public class TienDien {
     static int TinhTienDien(int kwh) {
-        int Tien = kwh * 1480;
+        int Tien;
+        if (kwh >= 0 && kwh <= 50) {
+            Tien = kwh * 1480;
+        }
+        else if (kwh >= 51 && kwh <= 100) {
+            Tien = kwh * 1533;
+        }
+        else if (kwh >= 101 && kwh <= 200) {
+            Tien = kwh * 1786;
+        }
+        else if (kwh >= 201 && kwh <= 300) {
+            Tien = kwh * 2242;
+        }
+        else {
+            Tien = kwh * 2503;
+        }
         return Tien;
 
     }

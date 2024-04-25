@@ -11,8 +11,13 @@ public class Chuong1 {
         //BaiTapTinhDiem Ruby = new BaiTapTinhDiem();
         //Ruby.TinhDiem();
         //bai 1.9
-        TienDien bai1_9 = new TienDien();
-        bai1_9.NhapChiSoDien();
+        //TienDien bai1_9 = new TienDien();
+        //bai1_9.NhapChiSoDien();
+        //bai 1.10
+        NhapNgayThangNam bai1_10 = new NhapNgayThangNam();
+        bai1_10.NgayThangNam();
+
+
 
 
 

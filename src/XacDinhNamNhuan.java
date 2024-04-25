@@ -1,8 +1,6 @@
 import java.util.Scanner;
 public class XacDinhNamNhuan {
-    public boolean xacDinhNamNhuan(){
-        Scanner input = new Scanner(System.in);
-        int Year = input.nextInt();
+    public boolean xacDinhNamNhuan(int Year){
         boolean laNamNhuan;
         if (Year % 400 == 0) {
             System.out.println("Nam " + Year + " la nam nhuan");
@@ -16,7 +14,6 @@ public class XacDinhNamNhuan {
             else {
                 System.out.println("Nam " + Year + " ko phai la nam nhuan");
                 laNamNhuan = false;
-
             }
         }
         return laNamNhuan;

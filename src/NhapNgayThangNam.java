@@ -1,32 +1,46 @@
+import java.util.Date;
 import java.util.Scanner;
 public class NhapNgayThangNam {
-    int Year;
-    int Month;
     int Day;
-    public void NgayThangNam (){
+    int Month;
+    int Year;
+    public boolean NgayThangNam () {
         Scanner input = new Scanner(System.in);
+        System.out.println("Nhap nam");
         Year = input.nextInt();
+        System.out.println(("Nhap thang"));
         Month = input.nextInt();
+        System.out.println("Nhap ngay");
         Day = input.nextInt();
-        XacDinhNgay Ngay = new XacDinhNgay();
-        int maxNgayTrongThang = Ngay.ngayTrongThang(Month, Year);
-
-        if (Day > 0 && Day <= maxNgayTrongThang && Month > 0 && Month <= 12 && Year >0) {
-           System.out.println(Day + " la mot ngay hop le");
-           System.out.println("dd/mm/yy: " + Day + "/" + Month + "/" + Year);
+        boolean NgayHopLe;
+        if (Day > 0 && Day <= 31 && Month > 0 && Month <= 12 && Year > 0) {
+            XacDinhNgay Ngay = new XacDinhNgay();
+            int maxNgayTrongThang = Ngay.ngayTrongThang(Month, Year);
+            if (Day <= maxNgayTrongThang) {
+                System.out.println("=> Ngay " + Day + " la mot ngay hop le");
+                System.out.println("dd/mm/yy: " + Day + "/" + Month + "/" + Year);
+                NgayHopLe = true;
+            } else {
+                System.out.println("=> Ngay " + Day + " la mot ngay ko hop le");
+                NgayHopLe = false;
+            }
         }
         else {
-            System.out.println(Day + " la mot ngay ko hop le");
+            NgayHopLe = false;
+            System.out.println("Ngay/thang/nam nhap ko hop le");
         }
-
+        return NgayHopLe;
     }
-    public int HaveDay() {
+
+    public int getDay() {
         return Day;
     }
-    public int HaveMonth() {
-        return  Month;
+
+    public int getMonth() {
+        return Month;
     }
-    public int HaveYear() {
+
+    public int getYear() {
         return Year;
     }
 }

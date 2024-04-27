@@ -14,11 +14,11 @@ public class Chuong1 {
         //TienDien bai1_9 = new TienDien();
         //bai1_9.NhapChiSoDien();
         //bai 1.10
-        NhapNgayThangNam bai1_10 = new NhapNgayThangNam();
-        bai1_10.NgayThangNam();
-
-
-
+        //NhapNgayThangNam bai1_10 = new NhapNgayThangNam();
+        //bai1_10.NgayThangNam();
+        //bai 1.11
+        NhapNgayKeTiepOrKeTruoc bai1_11 = new NhapNgayKeTiepOrKeTruoc();
+        bai1_11.NgayKeTiepOrNgayKeTruoc();
 
 
     }

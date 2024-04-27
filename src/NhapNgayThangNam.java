@@ -12,24 +12,24 @@ public class NhapNgayThangNam {
         Month = input.nextInt();
         System.out.println("Nhap ngay");
         Day = input.nextInt();
-        boolean NgayHopLe;
+        boolean NgayThangNamHopLe;
         if (Day > 0 && Day <= 31 && Month > 0 && Month <= 12 && Year > 0) {
             XacDinhNgay Ngay = new XacDinhNgay();
             int maxNgayTrongThang = Ngay.ngayTrongThang(Month, Year);
             if (Day <= maxNgayTrongThang) {
                 System.out.println("=> Ngay " + Day + " la mot ngay hop le");
                 System.out.println("dd/mm/yy: " + Day + "/" + Month + "/" + Year);
-                NgayHopLe = true;
+                NgayThangNamHopLe = true;
             } else {
                 System.out.println("=> Ngay " + Day + " la mot ngay ko hop le");
-                NgayHopLe = false;
+                NgayThangNamHopLe = false;
             }
         }
         else {
-            NgayHopLe = false;
+            NgayThangNamHopLe = false;
             System.out.println("Ngay/thang/nam nhap ko hop le");
         }
-        return NgayHopLe;
+        return NgayThangNamHopLe;
     }
 
     public int getDay() {

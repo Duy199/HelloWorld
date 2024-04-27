@@ -31,7 +31,7 @@ public class NhapNgayKeTiepOrKeTruoc {
             }
             // Neu ngay moi nhap ko hop le
             else {
-                System.out.println("Vui long nhap lai ngay moi");
+                System.out.println("Ngay moi nhap ko hop le, vui long nhap lai tu dau");
             }
         }
         // Neu ngay thang nam nhap ko hop le

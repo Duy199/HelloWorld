@@ -22,21 +22,40 @@ public class NhapNgayKeTiepOrKeTruoc {
             // Khai bao thang ke tiep va thang ke truoc
             int ThangKeTiep = 0;
             int ThangKeTruoc = 0;
+            // Khai bao thang Nam ke tiep va nam ke truoc
+            int NamKeTiep = 0;
+            int NamKeTruoc = 0;
 
+            // Neu ngay hien tai < Max ngay trong thang
             if (NgayHienTai < MaxNgay.ngayTrongThang(ThangHienTai, NamHienTai)) {
                 NgayKeTiep = NgayHienTai + 1;
                 NgayKeTruoc = NgayHienTai - 1;
                 System.out.println("dd/mm/yy ke tiep: " + NgayKeTiep + "/" + ThangHienTai + "/" + NamHienTai);
                 System.out.println("dd/mm/yy ke truoc: " + NgayKeTruoc + "/" + ThangHienTai + "/" + NamHienTai);
             }
-
+            // Neu ngay hien tai >= Max Ngay trong thang
             else {
-                NgayKeTiep = 1;
-                ThangKeTiep = ThangHienTai + 1;
-                NgayKeTruoc = ThangHienTai - 1;
-                ThangKeTruoc = ThangHienTai - 1;
-                System.out.println("dd/mm/yy ke tiep: " + NgayKeTiep + "/" + ThangKeTiep + "/" + NamHienTai);
-                System.out.println("dd/mm/yy ke truoc: " + NgayKeTruoc + "/" + ThangKeTruoc + "/" + NamHienTai);
+                // Neu la ngay cuoi nam
+                if (ThangHienTai < 12) {
+                    NgayKeTiep = 1;
+                    ThangKeTiep = ThangHienTai + 1;
+                    NgayKeTruoc = ThangHienTai - 1;
+                    ThangKeTruoc = ThangHienTai - 1;
+                    System.out.println("dd/mm/yy ke tiep: " + NgayKeTiep + "/" + ThangKeTiep + "/" + NamHienTai);
+                    System.out.println("dd/mm/yy ke truoc: " + NgayKeTruoc + "/" + ThangKeTruoc + "/" + NamHienTai);
+                }
+                // Neu la ngay trong nam
+                else {
+                    NgayKeTiep = 1;
+                    ThangKeTiep = 1;
+                    NamKeTiep = NamHienTai + 1;
+                    NgayKeTruoc = NgayHienTai - 1;
+                    ThangKeTruoc = ThangHienTai;
+                    NamKeTruoc = NamHienTai;
+                    System.out.println("dd/mm/yy ke tiep: " + NgayKeTiep + "/" + ThangKeTiep + "/" + NamKeTiep);
+                    System.out.println("dd/mm/yy ke truoc: " + NgayKeTruoc + "/" + ThangKeTruoc + "/" + NamKeTruoc);
+                }
+
             }
 
         }

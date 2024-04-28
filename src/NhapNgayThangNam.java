@@ -15,9 +15,8 @@ public class NhapNgayThangNam {
         Day = input.nextInt();
         boolean NgayThangNamHopLe;
         if (Day > 0 && Day <= 31 && Month > 0 && Month <= 12 && Year > 0) {
-            XacDinhNgay Ngay = new XacDinhNgay();
-            int maxNgayTrongThang = Ngay.ngayTrongThang(Month, Year);
-            if (Day <= maxNgayTrongThang) {
+            XacDinhNgay MaxNgay = new XacDinhNgay();
+            if (Day <= MaxNgay.ngayTrongThang(Month, Year)) {
                 System.out.println("=> Ngay " + Day + " la mot ngay hop le");
                 System.out.println("dd/mm/yy: " + Day + "/" + Month + "/" + Year);
                 NgayThangNamHopLe = true;

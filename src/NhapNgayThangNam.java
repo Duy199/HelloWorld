@@ -4,6 +4,7 @@ public class NhapNgayThangNam {
     int Day;
     int Month;
     int Year;
+
     public boolean NgayThangNam () {
         Scanner input = new Scanner(System.in);
         System.out.println("Nhap nam");

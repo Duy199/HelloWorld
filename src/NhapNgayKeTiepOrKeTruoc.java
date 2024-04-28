@@ -13,26 +13,32 @@ public class NhapNgayKeTiepOrKeTruoc {
         int NgayHienTai = NgayThangNam.getDay();
 
         // Neu ngay thang nam nhap hop le
-        if (NgayThangNamHopLe == true) {
-            Scanner input = new Scanner(System.in);
-            System.out.println("Vui long mot nhap ngay moi trong thang " + ThangHienTai + " cua nam " + NamHienTai);
-            int NgayMoi = input.nextInt();
-            // Neu ngay moi nhap hop le
-            if (NgayMoi > 0 && NgayMoi <= 31) {
-                if (NgayMoi > NgayHienTai) {
-                    System.out.println("Ngay " + NgayMoi + " la ngay ke tiep cua ngay " + NgayHienTai + " trong thang " + ThangHienTai + " cua Nam " + NamHienTai );
-                }
-                else if (NgayMoi < NgayHienTai) {
-                    System.out.println("Ngay " + NgayMoi + " la ngay ke truoc cua ngay " + NgayHienTai + " trong thang " + ThangHienTai + " cua Nam " + NamHienTai );
-                }
-                else {
-                    System.out.println("ko co ngay ke tiep hoac ke truoc do 2 ngay nhap = nhau");
-                }
+        if (NgayThangNamHopLe) {
+            // Goi method xac dinh max ngay trong thang
+            XacDinhNgay MaxNgay = new XacDinhNgay();
+            // Khai bao ngay ke tiep va ngay ke truoc
+            int NgayKeTiep = 0;
+            int NgayKeTruoc = 0;
+            // Khai bao thang ke tiep va thang ke truoc
+            int ThangKeTiep = 0;
+            int ThangKeTruoc = 0;
+
+            if (NgayHienTai < MaxNgay.ngayTrongThang(ThangHienTai, NamHienTai)) {
+                NgayKeTiep = NgayHienTai + 1;
+                NgayKeTruoc = NgayHienTai - 1;
+                System.out.println("dd/mm/yy ke tiep: " + NgayKeTiep + "/" + ThangHienTai + "/" + NamHienTai);
+                System.out.println("dd/mm/yy ke truoc: " + NgayKeTruoc + "/" + ThangHienTai + "/" + NamHienTai);
             }
-            // Neu ngay moi nhap ko hop le
+
             else {
-                System.out.println("Ngay moi nhap ko hop le, vui long nhap lai tu dau");
+                NgayKeTiep = 1;
+                ThangKeTiep = ThangHienTai + 1;
+                NgayKeTruoc = ThangHienTai - 1;
+                ThangKeTruoc = ThangHienTai - 1;
+                System.out.println("dd/mm/yy ke tiep: " + NgayKeTiep + "/" + ThangKeTiep + "/" + NamHienTai);
+                System.out.println("dd/mm/yy ke truoc: " + NgayKeTruoc + "/" + ThangKeTruoc + "/" + NamHienTai);
             }
+
         }
         // Neu ngay thang nam nhap ko hop le
         else {

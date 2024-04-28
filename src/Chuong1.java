@@ -19,7 +19,16 @@ public class Chuong1 {
         //bai 1.11
         NhapNgayKeTiepOrKeTruoc bai1_11 = new NhapNgayKeTiepOrKeTruoc();
         bai1_11.NgayKeTiepOrNgayKeTruoc();
+        //int [] numbers = {10, 20, 30, 40, 50};
+        //for (int x : numbers) {
+            //if (x == 30) {
+                //continue;
+
+            //System.out.println(x);
+            //System.out.println();
+            // Mutable vs Immutable
+        }
 
 
     }
-}
+

@@ -27,9 +27,14 @@ public class Chuong1 {
             //System.out.println(x);
             //System.out.println();
             // Mutable vs Immutable
-        // Bai 1.12
-        DemUocSoNguyen bai1_12 = new DemUocSoNguyen();
-        bai1_12.XacDinhUocSoNguyen();
+        //bai 1.12
+        //DemSo bai1_12 = new DemSo();
+        //bai1_12.DemCacUocSoCuaSoNguyen();
+        //DemSo bai1_12 = new DemSo();
+        //bai1_12.DemCacUocSoCuaSoNguyen();
+        //bai 1.13
+        DemSo bai1_13 = new DemSo();
+        bai1_13.LietKeCacUocSoLe();
         }
 
 

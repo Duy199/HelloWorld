@@ -17,8 +17,8 @@ public class Chuong1 {
         //NhapNgayThangNam bai1_10 = new NhapNgayThangNam();
         //bai1_10.NgayThangNam();
         //bai 1.11
-        NhapNgayKeTiepOrKeTruoc bai1_11 = new NhapNgayKeTiepOrKeTruoc();
-        bai1_11.NgayKeTiepOrNgayKeTruoc();
+        // NhapNgayKeTiepOrKeTruoc bai1_11 = new NhapNgayKeTiepOrKeTruoc();
+        // bai1_11.NgayKeTiepOrNgayKeTruoc();
         //int [] numbers = {10, 20, 30, 40, 50};
         //for (int x : numbers) {
             //if (x == 30) {
@@ -27,6 +27,9 @@ public class Chuong1 {
             //System.out.println(x);
             //System.out.println();
             // Mutable vs Immutable
+        // Bai 1.12
+        DemUocSoNguyen bai1_12 = new DemUocSoNguyen();
+        bai1_12.XacDinhUocSoNguyen();
         }
 
 

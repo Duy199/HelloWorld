@@ -63,6 +63,18 @@ public class DemSo {
         System.out.println(SoThuc + " ko phai la so thuc vi no bang 0");
         System.out.println("ket thuc chuong trinh");
     }
+    public void DemSoLuongCacChuSoLe () {
+        int SoNguyen = NhapSoNguyenDuong();
+        int DemSoLe = 0;
+        for (int i = 1; i <= SoNguyen; i++) {
+            if (i % 2 != 0) {
+                System.out.println(i);
+                DemSoLe ++;
+            }
+        }
+        System.out.println(SoNguyen + " co total " + DemSoLe + " chu so le ");
+    }
+
 }
 
 

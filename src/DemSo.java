@@ -33,6 +33,26 @@ public class DemSo {
             }
         }
     }
+    public void XacDinhSoNguyenTo() {
+        int SoNguyen = NhapSoNguyenDuong();
+        while (SoNguyen == 1) {
+            System.out.println("Dieu kien cua so nguyen to la so nguyen duong phai lon 1");
+            SoNguyen = NhapSoNguyenDuong();
+        }
+        int DemUoc = 0;
+        for (int i = 1; i <= SoNguyen; i++) {
+            if (SoNguyen % i == 0) {
+                DemUoc ++;
+                System.out.println(i);
+            }
+        }
+        if (DemUoc == 2) {
+            System.out.println(SoNguyen + " la so nguyen to");
+        }
+        else {
+            System.out.println(SoNguyen + " ko phai la so nguyen to");
+        }
+    }
 }
 
 

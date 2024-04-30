@@ -53,6 +53,16 @@ public class DemSo {
             System.out.println(SoNguyen + " ko phai la so nguyen to");
         }
     }
+    public void NhapSoThucKhac_0() {
+        Scanner input = new Scanner(System.in);
+        double SoThuc = input.nextDouble();
+        while (SoThuc != 0) {
+            System.out.println(SoThuc + " la so thuc vi no khac 0");
+            SoThuc = input.nextDouble();
+        }
+        System.out.println(SoThuc + " ko phai la so thuc vi no bang 0");
+        System.out.println("ket thuc chuong trinh");
+    }
 }
 
 

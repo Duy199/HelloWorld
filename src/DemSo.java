@@ -72,7 +72,21 @@ public class DemSo {
                 DemSoLe ++;
             }
         }
-        System.out.println(SoNguyen + " co total " + DemSoLe + " chu so le ");
+        System.out.println(SoNguyen + " co total " + DemSoLe + " chu so le");
+    }
+    public void TinhTongSoLuongCacChuSoChan() {
+        int SoNguyen = NhapSoNguyenDuong();
+        int DemSoChan = 0;
+        int TongSoLuong = 0;
+        for (int i = 1; i <= SoNguyen; i++) {
+            if (i % 2 == 0) {
+                DemSoChan ++;
+                TongSoLuong = TongSoLuong + DemSoChan;
+                System.out.println(TongSoLuong);
+            }
+        }
+        System.out.println(SoNguyen + " co toal " + DemSoChan + " chu so chan");
+        System.out.println("Tong so luong tu 1 den " + SoNguyen + " la " + TongSoLuong);
     }
 
 }

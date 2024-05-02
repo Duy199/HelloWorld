@@ -1,4 +1,5 @@
 import javax.xml.transform.Result;
+import java.util.Arrays;
 import java.util.Scanner;
 public class MayTinh {
     public void PhuongTrinhMayTinh() {
@@ -6,10 +7,16 @@ public class MayTinh {
         System.out.println("Nhap so ");
         int Number = input.nextInt();
         System.out.println("Moi nhap phep tinh (+, -, *, /) hoac dau (=) de cho ra ket qua");
-        input.nextLine();
-        String Calculate = input.nextLine();
+        String Calculate = input.next();
+
+        while (!Arrays.asList("+", "-", "*", "/", "=").contains(Calculate)) {
+            System.out.println("Vui long nhap lai phep tinh");
+            Calculate = input.next();
+        }
+
         int Result = 0;
         int DemSoLanLap = 0;
+
 
         // Neu ko nhap dau =
         while (!Calculate.equals("=")) {
@@ -83,8 +90,11 @@ public class MayTinh {
             }
             System.out.println("Ket qua hien tai la " + Result);
             System.out.println("Moi nhap phep tinh (+, -, *, /) hoac dau (=) de cho ra ket qua");
-            input.nextLine();
-            Calculate = input.nextLine();
+            Calculate = input.next();
+            while (!Arrays.asList("+", "-", "*", "/", "=").contains(Calculate)) {
+                System.out.println("Vui long nhap lai phep tinh");
+                Calculate = input.next();
+            }
             //System.out.println("Vong lap " + DemSoLanLap + " co ket qua la " + Result);
         }
         // Neu nhap dau =

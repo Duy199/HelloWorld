@@ -45,8 +45,11 @@ public class Chuong1 {
         //DemSo bai1_16 = new DemSo();
         //bai1_16.DemSoLuongCacChuSoLe();
         //bai 1.17
-        DemSo bai1_17 = new DemSo();
-        bai1_17.TinhTongSoLuongCacChuSoChan();
+        //DemSo bai1_17 = new DemSo();
+        //bai1_17.TinhTongSoLuongCacChuSoChan();
+        //bai extra
+        MayTinh ExtraProject = new MayTinh();
+        ExtraProject.PhuongTrinhMayTinh();
         }
     }
 

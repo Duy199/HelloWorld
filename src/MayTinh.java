@@ -1,4 +1,3 @@
-import javax.xml.transform.Result;
 import java.util.Arrays;
 import java.util.Scanner;
 public class MayTinh {

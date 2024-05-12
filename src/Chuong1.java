@@ -48,8 +48,10 @@ public class Chuong1 {
         //DemSo bai1_17 = new DemSo();
         //bai1_17.TinhTongSoLuongCacChuSoChan();
         //bai extra
-        MayTinh ExtraProject = new MayTinh();
-        ExtraProject.PhuongTrinhMayTinh();
+        //MayTinh ExtraProject = new MayTinh();
+        //ExtraProject.PhuongTrinhMayTinh();
+        Array AnotherProject = new Array();
+        AnotherProject.InputValueToArray();
         }
     }
 

@@ -31,8 +31,9 @@ public class Array {
         //Tim vi tri index cua Max
         System.out.println("Max cua Array A la: " + Max);
         for (int element : arrayA) {
+            IndexA = IndexA + 1;
             if (element == Max) {
-                IndexA = IndexA + 1;
+                System.out.println("Vi tri cua Max nam o index so " + IndexA);
             }
         }
         return arrayA;

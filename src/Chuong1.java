@@ -51,7 +51,9 @@ public class Chuong1 {
         //MayTinh ExtraProject = new MayTinh();
         //ExtraProject.PhuongTrinhMayTinh();
         Array AnotherProject = new Array();
-        AnotherProject.SoLonNhat();
+        int[] ArrayInput =  AnotherProject.InputValueToArray();
+        int[] ArrayAdjusted = AnotherProject.SoLonNhat(ArrayInput);
+        int[] MoreArrayAdjusted = AnotherProject.SoLonNhat(ArrayAdjusted);
         }
     }
 

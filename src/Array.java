@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 public class Array {
+    int Max = 0;
     public int[] InputValueToArray () {
         int MaxArray = 0;
         int [] Array;
@@ -22,7 +23,7 @@ public class Array {
     }
     public int[] SoLonNhat (int[] ArrayInputted) {
         int[] ArrayAdjusted;
-        int Max = 0;
+        Max = 0;
         int Index = -1;
         for (int element : ArrayInputted) {
             if (element > Max) {
@@ -32,15 +33,43 @@ public class Array {
         //Tim vi tri index cua Max
         System.out.println("Max cua Array A la: " + Max);
         for (int element : ArrayInputted) {
-            Index = Index + 1;
-            if (element == Max) {
-                System.out.println("Vi tri cua Max nam o index so " + Index);
-                ArrayInputted[Index] = 0;
+            if (Max == 0) {
+                System.out.println("Dung lai vong lap");
+            }
+            else {
+                Index = Index + 1;
+                if (element == Max) {
+                    System.out.println("Vi tri cua Max nam o index so " + Index);
+                    ArrayInputted[Index] = 0;
+                }
             }
         }
         System.out.println("Array moi vua tao la " + Arrays.toString(ArrayInputted));
         ArrayAdjusted = ArrayInputted;
         return ArrayAdjusted;
+    }
+
+    public int getMax() {
+        return Max;
+    }
+
+    public void SortArray () {
+        int[] A = InputValueToArray();
+        A = SoLonNhat(A);
+        int[] B = new int[A.length];
+        int[] Array;
+        int Max = 0;
+        int Index = 0;
+        int LastIndex = A.length - 1;
+        int DemSo = 0;
+
+        while (DemSo < A.length) {
+            B[LastIndex] = getMax();
+            LastIndex = LastIndex - 1;
+            DemSo = DemSo + 1;
+            A = SoLonNhat(A);
+        }
+        System.out.println("Array A dc sort tu nho toi lon la " + Arrays.toString(B));
     }
 }
 

@@ -18,7 +18,7 @@ public class Array {
             System.out.println(Arrays.toString(Array));
             Index = Index + 1;
         }
-        System.out.println("output cuoi cung cua 1 array la " + Arrays.toString(Array));
+        System.out.println("output cua Array vua nhap la " + Arrays.toString(Array));
         return Array;
     }
     public int[] SoLonNhat (int[] ArrayInputted) {

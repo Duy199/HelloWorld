@@ -71,6 +71,6 @@ public class Array {
         }
         System.out.println("Array A dc sort tu nho toi lon la " + Arrays.toString(B));
     }
-    //Que la oke lun hehehehehehehehe
+    //Que la oke lun hehehehehehehehehe
 }
 

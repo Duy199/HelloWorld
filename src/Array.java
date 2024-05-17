@@ -1,5 +1,8 @@
 import java.util.Arrays;
 import java.util.Scanner;
+
+import static java.awt.geom.Path2D.contains;
+
 public class Array {
     int Max = 0;
     public int[] InputValueToArray () {
@@ -9,14 +12,36 @@ public class Array {
         Scanner input = new Scanner(System.in);
         System.out.println("moi nhap max index cua mot array");
         MaxArray = input.nextInt();
+        while (MaxArray > 5) {
+            System.out.println("Max index chi dc nhap toi da la 5");
+            System.out.println("Vui long gioi han so Max Index lai ");
+            MaxArray = input.nextInt();
+        }
         System.out.println("Max index cua array la " + MaxArray);
         Array = new int[MaxArray];
         int Index = 0;
+        int Input = 0;
         while (Index < MaxArray) {
-            System.out.println("nhap gia tri cua Index " + Index);
-            Array[Index] = input.nextInt();
-            System.out.println(Arrays.toString(Array));
-            Index = Index + 1;
+            if (Index == 0) {
+                System.out.println("Nhap gia tri cua Index so " + Index);
+                Array[Index] = input.nextInt();
+                System.out.println(Arrays.toString(Array));
+                Index = Index + 1;
+            }
+            else {
+                System.out.println("nhap gia tri cua Index so " + Index);
+                Input = input.nextInt();
+                for (int element : Array) {
+                    while (element == Input) {
+                        System.out.println("Gia tri nhap vua nhap la " + Input + " da bi trung trong array " + Arrays.toString(Array));
+                        System.out.println("Vui long nhap lai gia tri moi o vi tri Index so " + Index);
+                        Input = input.nextInt();
+                    }
+                }
+                Array[Index] = Input;
+                System.out.println(Arrays.toString(Array));
+                Index = Index + 1;
+            }
         }
         System.out.println("output cua Array vua nhap la " + Arrays.toString(Array));
         return Array;
@@ -71,6 +96,5 @@ public class Array {
         }
         System.out.println("Array A dc sort tu nho toi lon la " + Arrays.toString(B));
     }
-    //Que la oke lun hehehehehehehehehe
 }
 

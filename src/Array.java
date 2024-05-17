@@ -22,30 +22,23 @@ public class Array {
         int Index = 0;
         int Input = 0;
         while (Index < MaxArray) {
-            if (Index == 0) {
-                System.out.println("Nhap gia tri cua Index so " + Index);
-                Array[Index] = input.nextInt();
-                System.out.println(Arrays.toString(Array));
-                Index = Index + 1;
-            }
-            else {
-                System.out.println("nhap gia tri cua Index so " + Index);
-                Input = input.nextInt();
-                for (int element : Array) {
-                    while (element == Input) {
-                        System.out.println("Gia tri nhap vua nhap la " + Input + " da bi trung trong array " + Arrays.toString(Array));
-                        System.out.println("Vui long nhap lai gia tri moi o vi tri Index so " + Index);
-                        Input = input.nextInt();
-                    }
+            System.out.println("Nhập giá trị của Index số " + Index);
+            Input = input.nextInt();
+            for (int i = 0; i < Index; i++) {
+                while (Array[i] == Input) {
+                    System.out.println("Gia tri nhap vua nhap la " + Input + " da bi trung trong array " + Arrays.toString(Array));
+                    System.out.println("Vui long nhap lai gia tri moi o vi tri Index so " + Index);
+                    Input = input.nextInt();
                 }
-                Array[Index] = Input;
-                System.out.println(Arrays.toString(Array));
-                Index = Index + 1;
             }
+            Array[Index] = Input;
+            System.out.println(Arrays.toString(Array));
+            Index = Index + 1;
         }
         System.out.println("output cua Array vua nhap la " + Arrays.toString(Array));
         return Array;
     }
+
     public int[] SoLonNhat (int[] ArrayInputted) {
         int[] ArrayAdjusted;
         Max = 0;

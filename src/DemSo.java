@@ -1,3 +1,4 @@
+import javax.swing.tree.FixedHeightLayoutCache;
 import java.util.Scanner;
 public class DemSo {
     static int NhapSoNguyenDuong () {
@@ -87,6 +88,28 @@ public class DemSo {
         }
         System.out.println(SoNguyen + " co toal " + DemSoChan + " chu so chan");
         System.out.println("Tong so luong tu 1 den " + SoNguyen + " la " + TongSoLuong);
+    }
+    public void HinhChuNhat () {
+        System.out.println("Moi ban nhap chieu dai");
+        int m = NhapSoNguyenDuong();
+        System.out.println("Moi ban nhap chieu cao");
+        int n = NhapSoNguyenDuong();
+        while (n >= m) {
+            System.out.println("chieu cao phai < or = chieu dai " + "\n" + "Moi ban nhap lai");
+            n = NhapSoNguyenDuong();
+        }
+        StringBuffer Length = new StringBuffer("*");
+        System.out.println("Tinh chieu dai ");
+        for (int Count = 0; Count < m; Count++) {
+            Length.append("*");
+        }
+        System.out.println("Chieu dai hcn : " + Length);
+        System.out.println("Chieu cao hcn : " + n);
+        //Build ra hinh chu nhat
+        System.out.println("Hinh chu nhat da build xong: ");
+        for (int Count = 0; Count < n; Count++) {
+            System.out.println(Length);
+        }
     }
 
 }

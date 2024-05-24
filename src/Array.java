@@ -1,13 +1,12 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static java.awt.geom.Path2D.contains;
-
 public class Array {
     int Max = 0;
-    public int[] InputValueToArray () {
+
+    public Integer[] InputValueToArray () {
         int MaxArray = 0;
-        int [] Array;
+        Integer[] Array;
         //int ArrayOutput = 0;
         Scanner input = new Scanner(System.in);
         System.out.println("moi nhap max index cua mot array");
@@ -18,29 +17,26 @@ public class Array {
             MaxArray = input.nextInt();
         }
         System.out.println("Max index cua array la " + MaxArray);
-        Array = new int[MaxArray];
+        Array = new Integer[MaxArray];
         int Index = 0;
         int Input = 0;
         while (Index < MaxArray) {
-            System.out.println("Nhập giá trị của Index số " + Index);
+            System.out.println("Nhap gia tri cua Index so " + Index);
             Input = input.nextInt();
-            for (int i = 0; i < Index; i++) {
-                while (Array[i] == Input) {
-                    System.out.println("Gia tri nhap vua nhap la " + Input + " da bi trung trong array " + Arrays.toString(Array));
-                    System.out.println("Vui long nhap lai gia tri moi o vi tri Index so " + Index);
-                    Input = input.nextInt();
-                }
+            while (Arrays.asList(Array).contains(Input)) {
+                System.out.println("Gia tri vua nhap la " + Input + " da bi trung o Array " + Arrays.toString(Array));
+                System.out.println("Vui long nhap gia tri moi o Index so " + Index);
+                Input = input.nextInt();
             }
             Array[Index] = Input;
             System.out.println(Arrays.toString(Array));
             Index = Index + 1;
         }
-        System.out.println("output cua Array vua nhap la " + Arrays.toString(Array));
+        System.out.println("Output cua Array vua nhap la " + Arrays.toString(Array));
         return Array;
     }
-
-    public int[] SoLonNhat (int[] ArrayInputted) {
-        int[] ArrayAdjusted;
+    public Integer[] SoLonNhat (Integer[] ArrayInputted) {
+        Integer[] ArrayAdjusted;
         Max = 0;
         int Index = -1;
         for (int element : ArrayInputted) {
@@ -72,7 +68,7 @@ public class Array {
     }
 
     public void SortArray () {
-        int[] A = InputValueToArray();
+        Integer[] A = InputValueToArray();
         A = SoLonNhat(A);
         int[] B = new int[A.length];
         int[] Array;

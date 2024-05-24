@@ -50,10 +50,13 @@ public class Chuong1 {
         //bai extra
         //MayTinh ExtraProject = new MayTinh();
         //ExtraProject.PhuongTrinhMayTinh();
-        Array AnotherProject = new Array();
+        //Array AnotherProject = new Array();
         //int[] ArrayInput =  AnotherProject.InputValueToArray();
         //int[] ArrayAdjusted = AnotherProject.SoLonNhat(ArrayInput);
-        AnotherProject.SortArray();
+        //AnotherProject.SortArray();
+        //bai 1.18
+        DemSo bai1_18 = new DemSo();
+        bai1_18.HinhChuNhat();
         }
     }
 

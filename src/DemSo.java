@@ -123,12 +123,12 @@ public class DemSo {
         // Chieu dai empty
         System.out.println("Tính chiều dài bị rỗng ở giữa");
         StringBuffer LengthEmpty = new StringBuffer("*");
-        for (int Count = 1; Count <= m; Count++) {
-            if (Count == 1 || Count < m) {
-                LengthEmpty.append(" ");
+        for (int Count = 1; Count < m; Count++) {
+            if (Count == 1 || Count < m-1) {
+                LengthEmpty.append("  ");
             }
             else {
-                LengthEmpty.append("*");
+                LengthEmpty.append(" *");
             }
         }
         System.out.println("Chiều dài bị rỗng ở giữa là: " + LengthEmpty);
@@ -139,9 +139,16 @@ public class DemSo {
             LengthNormal.append(" *");
         }
         System.out.println("Chiều dài ko bị rỗng là: " + LengthNormal);
-        System.out.println(LengthEmpty);
-        System.out.println(LengthNormal);
-
+        System.out.println("\n");
+        System.out.println("Hinh chu nhat rong dc build ra la: ");
+        for (int Count = 0; Count < n; Count++) {
+            if (Count == 0 || Count == n-1) {
+                System.out.println(LengthNormal);
+            }
+            else {
+                System.out.println(LengthEmpty);
+            }
+        }
     }
 
 }

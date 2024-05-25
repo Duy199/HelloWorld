@@ -100,8 +100,8 @@ public class DemSo {
         }
         StringBuffer Length = new StringBuffer("*");
         System.out.println("Tinh chieu dai ");
-        for (int Count = 0; Count < m; Count++) {
-            Length.append("*");
+        for (int Count = 1; Count < m; Count++) {
+            Length.append(" *");
         }
         System.out.println("Chieu dai hcn : " + Length);
         System.out.println("Chieu cao hcn : " + n);
@@ -110,6 +110,38 @@ public class DemSo {
         for (int Count = 0; Count < n; Count++) {
             System.out.println(Length);
         }
+    }
+    public void HinhChuNhatRong() {
+        System.out.println("Moi ban nhap chieu dai");
+        int m = NhapSoNguyenDuong();
+        System.out.println("Moi ban nhap chieu cao");
+        int n = NhapSoNguyenDuong();
+        while (n >= m) {
+            System.out.println("chieu cao phai < or = chieu dai " + "\n" + "Moi ban nhap lai");
+            n = NhapSoNguyenDuong();
+        }
+        // Chieu dai empty
+        System.out.println("Tính chiều dài bị rỗng ở giữa");
+        StringBuffer LengthEmpty = new StringBuffer("*");
+        for (int Count = 1; Count <= m; Count++) {
+            if (Count == 1 || Count < m) {
+                LengthEmpty.append(" ");
+            }
+            else {
+                LengthEmpty.append("*");
+            }
+        }
+        System.out.println("Chiều dài bị rỗng ở giữa là: " + LengthEmpty);
+        // Chieu dai ko bi rong
+        StringBuffer LengthNormal = new StringBuffer("*");
+        System.out.println("Tính chiều dài ko bị rỗng");
+        for (int Count = 1; Count < m; Count ++) {
+            LengthNormal.append(" *");
+        }
+        System.out.println("Chiều dài ko bị rỗng là: " + LengthNormal);
+        System.out.println(LengthEmpty);
+        System.out.println(LengthNormal);
+
     }
 
 }

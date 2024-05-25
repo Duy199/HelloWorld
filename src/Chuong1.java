@@ -55,8 +55,11 @@ public class Chuong1 {
         //int[] ArrayAdjusted = AnotherProject.SoLonNhat(ArrayInput);
         //AnotherProject.SortArray();
         //bai 1.18
-        DemSo bai1_18 = new DemSo();
-        bai1_18.HinhChuNhat();
+        //DemSo bai1_18 = new DemSo();
+        //bai1_18.HinhChuNhat();
+        //bai 1.19
+        DemSo bai1_19 = new DemSo();
+        bai1_19.HinhChuNhatRong();
         }
     }
 

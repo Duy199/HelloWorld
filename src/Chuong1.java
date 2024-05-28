@@ -62,9 +62,10 @@ public class Chuong1 {
         //bai1_19.HinhChuNhatRong();
         //bai 1.20
         DemSo bai1_20 = new DemSo();
-        //StringBuffer Bricks = new StringBuffer("__*");
-        //bai1_20.BuildingTamGiacCanLevel(Bricks, 4);
         bai1_20.TamGiacCan();
+        //bai 1.21
+        DemSo bai1_21 = new DemSo();
+        bai1_21.TamGiacCanRong();
         }
     }
 

@@ -241,4 +241,60 @@ public class DemSo {
             }
         }
     }
+    public StringBuffer BuildingTamGiacCanRongLevel (StringBuffer Empty, int Height) {
+        StringBuffer pyramidFloor = new StringBuffer("      ");
+        for (int Count = 1; Count <= Height; Count++) {
+            if (Count == Height) {
+                pyramidFloor.append(Empty);
+                pyramidFloor.append("*");
+            } else {
+                pyramidFloor.append("      ");
+
+            }
+        }
+        //System.out.println(pyramidFloor);
+        return pyramidFloor;
+    }
+    public void TamGiacCanRong () {
+        System.out.println("Moi ban nhap chieu cao");
+        int n = NhapSoNguyenDuong();
+        StringBuffer TamGiacCanRong = new StringBuffer();
+        StringBuffer TamGiacCanNormal = new StringBuffer();
+        StringBuffer Empty = new StringBuffer();
+        StringBuffer Bricks = new StringBuffer("*");
+        int IndexRong = 3;
+        int IndexNormal = 3;
+        for (int Count = 1; Count <= n; Count++) {
+            if (Count == 1) {
+                TamGiacCanRong = BuildingTamGiacCanRongLevel(Empty, n);
+                TamGiacCanNormal = BuildingTamGiacCanLevel(Bricks, n);
+                System.out.println(TamGiacCanRong);
+                Empty.append("*     ");
+                Bricks.append("  *  *");
+            }
+            else if (Count == 2) {
+                TamGiacCanRong = BuildingTamGiacCanRongLevel(Empty, n);
+                TamGiacCanNormal = BuildingTamGiacCanLevel(Bricks, n);
+                TamGiacCanRong.delete(0, IndexRong);
+                TamGiacCanNormal.delete(0, IndexNormal);
+                System.out.println(TamGiacCanRong);
+                Empty.append("      ");
+                Bricks.append("  *  *");
+            }
+            else if (Count == n) {
+                TamGiacCanNormal = BuildingTamGiacCanLevel(Bricks, n);
+                TamGiacCanNormal.delete(0, IndexNormal = IndexNormal + 3);
+                System.out.println(TamGiacCanNormal);
+            }
+            else {
+                TamGiacCanRong = BuildingTamGiacCanRongLevel(Empty, n);
+                TamGiacCanNormal = BuildingTamGiacCanLevel(Bricks, n);
+                TamGiacCanRong.delete(0, IndexRong = IndexRong + 3);
+                TamGiacCanNormal.delete(0, IndexNormal = IndexNormal + 3);
+                System.out.println(TamGiacCanRong);
+                Empty.append("      ");
+                Bricks.append("  *  *");
+            }
+        }
+    }
 }

@@ -150,7 +150,44 @@ public class DemSo {
             }
         }
     }
+    public void KimTuThap () {
+        System.out.println("Moi ban nhap chieu dai");
+        int m = NhapSoNguyenDuong();
+        System.out.println("Moi ban nhap chieu cao");
+        int n = NhapSoNguyenDuong();
+        while (n >= m) {
+            System.out.println("chieu cao phai < or = chieu dai " + "\n" + "Moi ban nhap lai");
+            n = NhapSoNguyenDuong();
+        }
+        StringBuffer Length1 = new StringBuffer("*");
 
+        System.out.println("Tinh chieu dai ");
+        for (int Count = 1; Count < m; Count++) {
+            Length1.append(" *");
+        }
+        System.out.println(Length1);
+
+        Length1.replace(0,2,"  ");
+        Length1.replace(11,13,"  ");
+        System.out.println(Length1);
+
+        Length1.replace(2, 4, "  ");
+        Length1.replace(9,11,"  ");
+        System.out.println(Length1);
+
+        Length1.replace(4,6,"  ");
+        Length1.replace(7,9,"  ");
+        System.out.println(Length1);
+
+        //Length1.replace(2,3,"* ");
+        //Length1.replace(5,6," *");
+        //System.out.println(Length1);
+
+        //Length1.replace(1,2,"* ");
+        //Length1.replace(6,7," *");
+        //System.out.println(Length1);
+
+    }
 }
 
 

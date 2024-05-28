@@ -58,8 +58,11 @@ public class Chuong1 {
         //DemSo bai1_18 = new DemSo();
         //bai1_18.HinhChuNhat();
         //bai 1.19
-        DemSo bai1_19 = new DemSo();
-        bai1_19.HinhChuNhatRong();
+        //DemSo bai1_19 = new DemSo();
+        //bai1_19.HinhChuNhatRong();
+        //bai 1.20
+        DemSo bai1_20 = new DemSo();
+        bai1_20.KimTuThap();
         }
     }
 
